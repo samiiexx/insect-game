@@ -1,0 +1,84 @@
+<!--
+ Copyright 2021 sfchi
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+     http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Catch the Insect</title>
+  </head>
+  <body>
+    <div class="screen">
+      <h1>Catch the Insect</h1>
+      <button class="btn" id="start-btn">Play Game</button>
+    </div>
+
+    <div class="screen">
+      <h1>Select your worst insect.</h1>
+      <ul class="insects-list">
+        <li>
+          <button class="choose-insect-btn">
+            <p>Fly</p>
+            <img
+              src="http://pngimg.com/uploads/fly/fly_PNG3946.png"
+              alt="Fly"
+            />
+          </button>
+        </li>
+
+        <li>
+          <button class="choose-insect-btn">
+            <p>Mosquito</p>
+            <img
+              src="http://pngimg.com/uploads/mosquito/mosquito_PNG18175.png"
+              alt="Mosquito"
+            />
+          </button>
+        </li>
+        <li>
+          <button class="choose-insect-btn">
+            <p>Spider</p>
+            <img
+              src="http://pngimg.com/uploads/spider/spider_PNG12.png"
+              alt="Spider"
+            />
+          </button>
+        </li>
+        <li>
+          <button class="choose-insect-btn">
+            <p>Roach</p>
+            <img
+              src="http://pngimg.com/uploads/roach/roach_PNG12163.png"
+              alt="Roach"
+            />
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="screen game-container" id="game-container">
+        <h2 class="time" id="time">Time: 00:00</h2>
+        <h2 class="score" id="score">Score: 0</h2>
+        <h3 id="message" class="message">
+            Are you pissed off yet? <br> This is an impossible game!!
+        </h3>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

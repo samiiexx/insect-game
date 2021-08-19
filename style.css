@@ -1,0 +1,169 @@
+/**
+ * Copyright 2021 sfchi
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+ 
+
+ *{
+    box-sizing: border-box;
+}
+
+ body {
+     font-family: 'Press Start 2P', sans-serif;
+     height: 100vh;
+     margin: 0;
+     text-align: center;
+     background-color: #4d194d;
+     color: #f0f0f0;
+    overflow: hidden;
+ }
+
+ a {
+     color: #f0f0f0;
+ }
+
+ h1 {
+     line-height: 1.4;
+     letter-spacing: 4px;
+ }
+
+ .btn {
+     border: 0;
+     background-color: #f0f0f0;
+     color: #4d194d;
+     padding: 1rem 1.2rem;
+     font-family: inherit;
+     cursor: pointer;
+ }
+
+ .btn:hover {
+     opacity: 0.9;
+ }
+
+ .btn:focus {
+    outline: 0;
+}
+
+ .screen {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+     width: 100vw;
+     transition: margin 0.5s ease-out;
+ }
+
+ .screen.up{
+     margin-top: -100vh;
+ }
+
+ .insects-list {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     list-style-type: none;
+     padding: 0;
+ }
+
+ .insects-list li {
+     margin: 10px;
+ }
+
+ .choose-insect-btn {
+    background-color: transparent;
+    border: 2px solid #f0f0f0;
+    color: #f0f0f0;
+    cursor: pointer;
+    font-family: inherit;
+    width: 150px;
+    height: 150px;
+    transition: 0.2s ease-in-out;
+}
+
+.choose-insect-btn:hover {
+    background-color: #f0f0f0;
+    color: #4d194d;
+    transition: 0.4s ease-in-out;
+}
+
+.choose-insect-btn:active {
+    background-color: rgba(255,255,255,0.7);
+}
+ 
+ .choose-insect-btn img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+ }
+
+ .game-container {
+     position: relative;
+ }
+
+ .time, .score {
+    position: absolute;
+    top: 20px;
+ }
+
+ .time {
+     left: 50px;
+ }
+
+ .score {
+     right: 50px;
+ }
+
+ .message{
+     line-height: 1.7;
+     letter-spacing: 4px;
+     background-color: rgba(0,0,0,0.5);
+     width: 100%;
+     padding: 20px;
+     z-index: 100;
+     text-align: center;
+     opacity: 0;
+     position: absolute;
+     top: 0;
+     left: 50%;
+     transform: translate(-50%, -150%);
+     transition: transform 0.4s ease-in;
+ }
+
+ .message.visible {
+     opacity: 1;
+     transform: translate(-50%, 150%);
+ }
+
+ .insect {
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100px;
+     height: 100px;
+     position: absolute;
+     transform: translate(-50%, -50%) scale(1);
+     transition: transform 0.3s ease-out;
+    }
+
+    .insect.caught {
+     transform: translate(-50%, -50%) scale(0);
+    }
+
+ .insect img {
+    width: 100px;
+    height: 100px;
+ }
